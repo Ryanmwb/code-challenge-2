@@ -1,0 +1,109 @@
+.sidebar{
+    height: 100%;
+    width: 230px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+    list-style: none;
+    margin: 0px;
+    background-color: #D61A46;
+  }
+
+        .room-list{
+            padding: 5px;
+            margin-top: 15px;
+            left: 10px
+        }
+
+                .btn-info{
+                    margin: 0px auto;
+                    margin-top: 15px;
+                }
+
+.create-room{
+    width: 180px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+        .form-control{
+            margin-bottom: 3px;
+        }
+
+.create-message{
+    margin: 0 auto;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.header > h1{
+    margin: 0;
+    padding-bottom: 35px;
+}
+
+.message-list{
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+} 
+
+.message-list-title{
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+.message-list > table{
+    margin: 0 auto;
+}
+
+.user{
+    padding-bottom: 30px;
+}
+
+.row > span{
+    margin: 0 auto;
+}
+
+.left{
+    align-content: right;
+}
+
+.send-message{
+    border-radius: 50px;
+    border-top-right-radius: 12px;
+    width: 25%;
+    float: right;
+    background-color: #D61A46;
+    border-color: #D61A46;
+}
+
+#message{
+    margin-bottom: 0;
+}
+
+.user-button{
+    background-color: #e1d4f7;
+    border-color: #e1d4f7;
+}
+
+.rooms-button{
+    background-color: #e1d4f7;
+    border-color: #e1d4f7;
+    color: #D61A46;
+}
+
+.font{
+    color: #e1d4f7;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.table{
+    margin-bottom: 20px;
+}
+
+.table-row{
+    border: none;
+}

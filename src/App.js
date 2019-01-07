@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-//import './App.css';
+import './App.css';
 import RoomList from './components/RoomList';
-//import MessageList from './components/MessageList';
-//import User from './components/User';
+import MessageList from './components/MessageList';
+import User from './components/User';
 import * as firebase from 'firebase';
 
 var config = {
@@ -25,6 +25,17 @@ class App extends Component {
     }
   }
 
+  changeCurrentRoom(room){
+    this.setState({ currentRoom: room.key })
+    this.setState({ currentRoomNAme: room.name })
+    console.log(this.state.currentRoom)
+  }
+
+  setUser(user){
+    this.setState({user: user})
+    console.log(user)
+  }
+
   render() {
     return (
       <div className="App">
@@ -32,9 +43,9 @@ class App extends Component {
           <h1>ChatRoom</h1>
         </header>
         <main>
-          <RoomList
-            firebase={firebase}
-          />
+          <User firebase={firebase} setUser={this.setUser.bind(this)} user={this.state.user}/>
+          <MessageList firebase={firebase}/>
+          <RoomList firebase={firebase} changeCurrentRoom={(room) => this.changeCurrentRoom(room)} />
         </main>
       </div>
     );

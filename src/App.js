@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import './App.css';
+//import './App.css';
+import RoomList from './components/RoomList';
+//import MessageList from './components/MessageList';
+//import User from './components/User';
 import * as firebase from 'firebase';
 
 var config = {
@@ -13,22 +16,26 @@ var config = {
 firebase.initializeApp(config);
 
 class App extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      currentRoom: null, 
+      currentRoomName: null,
+      user: null
+    }
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+        <header>
+          <h1>ChatRoom</h1>
         </header>
+        <main>
+          <RoomList
+            firebase={firebase}
+          />
+        </main>
       </div>
     );
   }
